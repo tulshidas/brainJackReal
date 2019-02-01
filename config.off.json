@@ -1,0 +1,4 @@
+{
+    "dataDumpUrl": "http://localhost:52085/api/activity",
+    "webAppUrl": "http://localhost:51642"
+}

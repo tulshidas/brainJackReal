@@ -1,0 +1,111 @@
+{
+  "name": "BrainJack",
+  "version": "1.0.0",
+  "description": "An activity monitoring system",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "build"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "BrainJack",
+    "Brain Jack",
+    "Activity Tracking",
+    "Self Monitoring"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^2.0.0",
+    "electron-rebuild": "^1.8.2",
+    "electron-builder": "^20.38.5"
+  },
+  "dependencies": {
+    "active-window": "^0.1.0",
+    "auth0-js": "^9.8.2",
+    "cmake-js": "^4.0.1",
+    "crypto": "^1.0.1",
+    "electron-log": "^2.2.17",
+    "electron-updater": "^4.0.6",
+    "iohook": "^0.3.0",
+    "lodash": "^4.17.11",
+    "request": "^2.88.0"
+  },
+  "cmake-js": {
+    "runtime": "electron",
+    "runtimeVersion": "2.0.0"
+  },
+  "iohook": {
+    "targets": [
+      "node-59",
+      "electron-57"
+    ],
+    "platforms": [
+      "win32",
+      "darwin",
+      "linux"
+    ],
+    "arches": [
+      "x64",
+      "ia32"
+    ]
+  },
+  "build": {
+    "appId": "com.bs.brainJack",
+    "productName": "Brain Jack",
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "identity": null,
+      "icon": "assets/icons/mac/icon.icns",
+      "category": "public.app-category.productivity"
+    },
+    "dmg": {
+      "background": "",
+      "icon": "icon.icns",
+      "iconSize": 100,
+      "window": {
+        "width": 744,
+        "height": 465
+      },
+      "contents": [
+        {
+          "x": 145,
+          "y": 257
+        },
+        {
+          "x": 400,
+          "y": 255,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "category": "productivity",
+      "icon": "assets/icons",
+      "packageCategory": "productivity",
+      "maintainer": "Tahlil bsse0803@iit.du.ac.bd",
+      "target": [
+        "AppImage"
+      ],
+      "synopsis": "A desktop monitoring app"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "icon.ico"
+    },
+    "nsis": {
+      "installerIcon": "icon.ico",
+      "uninstallerIcon": "icon.ico",
+      "license": "LICENSE.md",
+      "runAfterFinish": true
+    },
+    "asar": true,
+    "asarUnpack": "scripts"
+  }
+}
